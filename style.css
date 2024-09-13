@@ -7,13 +7,318 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: #081b29;
+    color: #ededed;
 }
 .header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: yellowgreen;
+    padding: 20px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+
+.navbar a{
+    font-size: 15px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500px;
+    margin-left: 35px;
+    transition: .5s;
+    /* this transition is for navbar */
+
+}
+.navbar a:hover, .navbar a.active{
+    color: #00abf0;
+}
+
+.home{
+    height: 100vh;
+/* here height is for distance betn logo & paragraph */
+/* you can adjust up down accn to height attribute */
+
+    background: url('home.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+ /* background-color: #081b29; */
+/* these bg are for bground and color & setup. */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+/* 0 means top & bottom padding is 0, while left &right would have padding of 10%. */
+
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #00abf0;
+
+}
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p{
+    position: relative;
+    font-size: 15px;
+    margin: 20px 0 40px;
+/*  imp pt. to remember- margin is added to give space betn paragraph & btn-box(i.e hire me & let's talk). */
+/* 20px- top margin, 0- left & right margin, 40px- bottom margin. */
+}
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    
+    width: 345px;
+    height: 50px; 
+    
+}
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+/* inline flex make the element a flexbox container& container will be inline. */
+    justify-content: center;
+    align-items: center;
+/* with 86, 87,88 line btn-box's text comes in center */
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    /* Button box is imp. Pay attention */
+
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+/* this overflow is related to line 124,125,126,127.  */
+/* it will hide the red color but will show letters without overlapping. */
+    transition: .5s;
+} 
+.btn-box a:hover{
+    color: #00abf0;
+}
+
+
+.btn-box a:nth-child(2){
+/* here 2 a links are there in btn-box. So to select 2nd a link nth-child(2) is used. */
+    background: transparent;
+    color: #00abf0;
+/* this color=__ is font color */
+}
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+}
+/* above hover is for 2nd box(i.elets talk). */
+.btn-box a:nth-child(2)::before{
+    background: #00abf0;
+}
+
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+/* background: red; is to show that if you want this kind of transition then simply write these attributes and replace the red color with the bgcolor. */
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+/* 147,148 line is to do the hover for 134-144 line. */
+
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+/* overflow is used for transition */
+    transition: .5s;
+
+}
+.home-sci a:hover{
+    color: #081b29;
+/* color is overlaped but signs are not visible so we use this 179,180 line. */
+
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 450px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+
+}
+.home-imgHover:hover{
+    background: #081b29;
+    opacity: .8;
+}
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 100;
+/* z index = 100, bczit covers all navbar and picture also. */
+}
+
+/* KEYFRAMES ANIMATION (below) */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+
+    }
 }
